@@ -9,36 +9,51 @@ namespace WebApplication1.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        // GET array
+        [HttpGet("/api/array")]
+        public List<string> GetArray()
         {
-            return new string[] { "value1", "value2" };
+            List<string> myList = new List<string>();
+            myList.Add("niloofar1");
+            myList.Add("niloofar2");
+            myList.Add("niloofar3");
+            myList.Add("niloofar4");
+            return myList;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // GET int
+        [HttpGet("/api/int-value/{id}")]
+        public int GetInt(int id)
         {
-            return "value";
+            return id;
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
+        // GET string
+        [HttpGet("/api/string-value/{tmp}")]
+        public string GetString(string tmp)
         {
+            string result = "Hello " + tmp;
+            return result;
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public class Person
         {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public Person(string name, int age)
+            {
+                Name = name;
+                Age = age;
+            }
+            //Other properties, methods, events...
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // GET object
+        [HttpGet("/api/object")]
+        public object GetObject()
         {
-        }
+            Person person1 = new Person("niloofar", 26);
+            return person1;
+    }
     }
 }
