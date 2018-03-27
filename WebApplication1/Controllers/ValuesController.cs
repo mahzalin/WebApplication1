@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -47,9 +47,9 @@ namespace WebApplication1.Controllers
             }
             //Other properties, methods, events...
         }
-        
+         
         // GET object
-        [HttpGet("/api/object")]
+        [HttpGet("api/object")]
         public object GetObject()
         {
             Person person1 = new Person("niloofar", 26);

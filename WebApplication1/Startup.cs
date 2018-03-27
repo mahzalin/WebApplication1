@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,10 +29,15 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+
+          if (env.IsDevelopment())
+           {
                 app.UseDeveloperExceptionPage();
-            }
+           }
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+            app.UseMvc();
 
             app.UseMvc();
         }

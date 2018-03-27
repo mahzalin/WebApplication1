@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+
+
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/controller/app.js"></script>
+  <script src="js/controller/indexController.js"></script>
+</head>
+<body ng-controller="indexController">
+  <div>
+   <span> name = </span> <a ng-bind="data.name"></a>
+    <br />
+    <span>age = </span><a ng-bind="data.age"></a>
+  </div>
+</body>
+</html>
