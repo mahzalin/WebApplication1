@@ -47,7 +47,7 @@ namespace WebApplication1.Controllers
             }
             //Other properties, methods, events...
         }
-         
+        
         // GET object
         [HttpGet("/api/object")]
         public object GetObject()
