@@ -47,13 +47,20 @@ namespace WebApplication1.Controllers
             }
             //Other properties, methods, events...
         }
-
+         
         // GET object
         [HttpGet("/api/object")]
         public object GetObject()
         {
             Person person1 = new Person("niloofar", 26);
             return person1;
-    }
+        }
+
+        [HttpGet("/api/int-value2")]
+        [HttpGet("/api/int-value2/{id}")]
+        public int GetInt2(int id=1)
+        {
+            return id;
+        }
     }
 }
