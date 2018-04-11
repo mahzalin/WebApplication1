@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
     public class ValuesController : Controller
     {
         // GET array
-        [HttpGet("/api/array")]
+        [HttpGet("api/array")]
         public List<string> GetArray()
         {
             List<string> myList = new List<string>();
@@ -22,14 +22,14 @@ namespace WebApplication1.Controllers
         }
 
         // GET int
-        [HttpGet("/api/int-value/{id}")]
+        [HttpGet("api/int-value/{id}")]
         public int GetInt(int id)
         {
             return id;
         }
 
         // GET string
-        [HttpGet("/api/string-value/{tmp}")]
+        [HttpGet("api/string-value/{tmp}")]
         public string GetString(string tmp)
         {
             string result = "Hello " + tmp;
@@ -56,8 +56,8 @@ namespace WebApplication1.Controllers
             return person1;
         }
 
-        [HttpGet("/api/int-value2")]
-        [HttpGet("/api/int-value2/{id}")]
+        [HttpGet("api/int-value2")]
+        [HttpGet("api/int-value2/{id}")]
         public int GetInt2(int id = 1)
         {
             return id;

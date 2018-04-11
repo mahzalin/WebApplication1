@@ -19,21 +19,21 @@
             function (error) {
                 console.log(error);
             });
-        $http.get('./api/int-value2/50').then(
+        $http.get('./api/Values/api/int-value2/50').then(
             function (response) {
                 $scope.val = response.data;
             },
             function (error) {
                 console.log(error);
             });
-        $http.get('./api/string-value/niloofar').then(
+        $http.get('./api/Values/api/string-value/niloofar').then(
             function (response) {
                 $scope.val2 = response.data;
             },
             function (error) {
                 console.log(error);
             });
-        $http.get('./api/array').then(
+        $http.get('./api/Values/api/array').then(
             function (response) {
                 $scope.val3 = response.data;
             },
