@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <meta charset="utf-8" />
-  <title></title>
+    <meta charset="utf-8" />
+    <title></title>
 
 
-  <script src="js/lib/angular/angular.min.js"></script>
-  <script src="js/controller/app.js"></script>
-  <script src="js/controller/indexController.js"></script>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/controller/app.js"></script>
+    <script src="js/controller/indexController.js"></script>
 </head>
 <body ng-controller="indexController">
-  <div>
-   <span> name = </span> <a ng-bind="data.name"></a>
-    <br />
-    <span>age = </span><a ng-bind="data.age"></a>
-  </div>
+    <div>
+        <span> name= </span> <a ng-bind="data.name"></a>
+        <br />
+        <span>age= </span><a ng-bind="data.age"></a>
+        <br />
+        <span>num= </span><a ng-bind="val"></a>
+        <br />
+        <span>string= </span><a ng-bind="val2"></a>
+        <br />
+        <span>array[0]= </span><a ng-bind="val3[0]"></a>
+    </div>
 </body>
 </html>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-  
+
 namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
@@ -47,9 +47,9 @@ namespace WebApplication1.Controllers
             }
             //Other properties, methods, events...
         }
-         
+
         // GET object
-        [HttpGet("/api/object")]
+        [HttpGet("api/object")]
         public object GetObject()
         {
             Person person1 = new Person("niloofar", 26);
@@ -58,7 +58,7 @@ namespace WebApplication1.Controllers
 
         [HttpGet("/api/int-value2")]
         [HttpGet("/api/int-value2/{id}")]
-        public int GetInt2(int id=1)
+        public int GetInt2(int id = 1)
         {
             return id;
         }
